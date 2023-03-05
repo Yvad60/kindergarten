@@ -1,2 +1,2 @@
 # kindergarten
-Learning by tearing thing up, the same way it is done in kindergarten
+Learning by tearing things up, the same way it is done in kindergarten😎
