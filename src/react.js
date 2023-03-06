@@ -1,14 +1,26 @@
-function createElement(tag, props, children) {
+function createElement(tag, props, ...children) {
   const element = document.createElement(tag);
+  console.log(children);
   // adding props to element
-  Object.keys(props).forEach((key) => {
-    element.setAttribute(key, props[key]);
+  if (props) {
+    Object.keys(props).forEach((key) => {
+      if (key === "className") {
+        element.setAttribute("class", props[key]);
+      } else {
+        element.setAttribute(key, props[key]);
+      }
+    });
+  }
+
+  children.forEach((child) => {
+    if (typeof child == "string") {
+      let text = document.createTextNode(child);
+      element.appendChild(text);
+    } else {
+      element.appendChild(child);
+    }
   });
 
-  if (typeof children == "string") {
-    let text = document.createTextNode(children);
-    element.appendChild(text);
-  }
   return element;
 }
 
