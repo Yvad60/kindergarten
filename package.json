@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "bundle": "esbuild ./src/index.js --bundle --outfile=./build/index.js --target=chrome58,firefox57,safari11,edge16 --loader:.js=jsx"
+    "build": "esbuild ./src/index.js --bundle --outfile=./build/index.js --target=chrome58,firefox57,safari11,edge16 --loader:.js=jsx",
+    "watch": "esbuild ./src/index.js --bundle --outfile=./build/index.js --loader:.js=jsx --watch"
   },
   "dependencies": {
     "esbuild": "0.17.11"
