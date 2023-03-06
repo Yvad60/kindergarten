@@ -1,7 +1,9 @@
 function createElement(tag, props, ...children) {
+  if (typeof tag == "function") {
+    return tag();
+  }
   const element = document.createElement(tag);
-  console.log(children);
-  // adding props to element
+
   if (props) {
     Object.keys(props).forEach((key) => {
       if (key === "className") {
@@ -28,4 +30,4 @@ const React = {
   createElement,
 };
 
-export default React;
+export default React

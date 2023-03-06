@@ -1,7 +1,10 @@
 const ReactDOM = {
   render: (parentEl, childEl) => {
-    console.log("yaya", childEl);
-    parentEl.appendChild(childEl);
+    if (typeof childEl == "function") {
+      parentEl.appendChild(childEl());
+    } else {
+      parentEl.appendChild(childEl);
+    }
   },
 };
 

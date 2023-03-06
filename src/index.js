@@ -1,21 +1,20 @@
+import CustomComponent from "./CustomComponent";
 import React from "./react";
 import ReactDOM from "./react-dom";
 
-const hello = (
-  <div className="app" id="tun">
-    <h1>Hello world</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptas
-      provident commodi quibusdam harum minima aut illo doloremque delectus,
-      itaque laborum deserunt incidunt tenetur expedita, quam mollitia est,
-      ullam repellat?
-    </p>
-    <ul>
-      <li>hello</li>
-      <li>Hi</li>
-      <li>how are you</li>
-    </ul>
-  </div>
-);
+const Hello = () => {
+  return (
+    <div className="app" id="abc">
+      <h1>Hello world</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet cum
+        voluptatum dolor. Soluta nostrum alias in cumque porro sint optio
+        explicabo ducimus eveniet ea. Inventore numquam unde voluptates
+        temporibus quia.
+      </p>
+      <CustomComponent />
+    </div>
+  );
+};
 
-ReactDOM.render(document.getElementById("root"), hello);
+ReactDOM.render(document.getElementById("root"), <Hello />);
